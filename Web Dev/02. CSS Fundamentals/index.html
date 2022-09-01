@@ -17,23 +17,24 @@
         <h5>The Basic Language of the web :HTML</h5>
         <h6>The Basic Language of the web :HTML</h6>
     -->
-
+    <div class ="container">
         <header class ="main-header">
             <h1 >📘 The Code Magazine</h1>
 
-            <nav>
+            <nav>   
                 <a href="blog.html">Blog</a>
                 <a href="#">Challanges</a>
                 <a href="#">FlexBox</a>
                 <a href="#">CSS grid</a>
             </nav>
 
-            <p>Test paragraph</p>
+           
+
         </header>
 
         <article>
-            <header>
-                <h2>The Basic Language of the web :HTML</h2>
+            <header class ="post-header">
+                <h2 >The Basic Language of the web :HTML</h2>
 
                 <img
                 src = "img/itachi.jpg"
@@ -41,13 +42,16 @@
                 height="50" 
                 width="50" >
                 
-                <p id="author" >Posted by <strong>Manish Gupta</strong> on Monday</p>
+                <p id="author">Posted by <strong>Manish Gupta</strong> on Monday</p>
         
                 <img 
                 src = "img/post.jpg" 
                 alt="random code on screen"
                 height="400"
-                width="500"/>
+                width="500"
+                class="post-image"/>
+
+                <button class="like-button">❤ Like</button>
         
             </header>
 
@@ -75,7 +79,7 @@
             <a href="https://developer.mozilla.org/en-US/"
             target ="blank"> MDN web docs</a>.</p>
 
-        <h3>Why should you learn HTML?</h3>
+        <h4 >Why should you learn HTML?</h3>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             Hic ipsam voluptatibus deleniti qui vel illum amet, 
             repellat unde ratione aliquid odit maiores,
@@ -97,7 +101,7 @@
         </article>
 
         <aside>
-            <h4>Related Posts</h4>
+            <h5>Related Posts</h4>
             <ul class ="related-list">
                 <li>
                     <img src ="img/code.jfif"
@@ -132,11 +136,14 @@
         </aside>
 
         <footer>
-            <p >
+            <p id = "copyright" class = "copyright text" >
                 Copyright &copy; 2027 by The Code Magazine.
             </p>
             
         </footer>
+        
+    </div>
+
     </body>
 
 </hmtl> 
