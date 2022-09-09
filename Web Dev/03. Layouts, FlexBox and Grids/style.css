@@ -136,7 +136,6 @@ li:first-child{
 
 li:last-child{
     font-style:italic;
-    
 }
 
 /* pseudo elements */
@@ -146,7 +145,7 @@ h1::first-letter{
 }
 
 h3 + p::first-line{
-    color:red;
+    /* color:red; */
 }
 
 h2{
@@ -212,6 +211,7 @@ nav a:link{
 
 /* FLOATS */
 
+/*  
 .author-image{
     float:left;
     margin-bottom:20px;
@@ -228,17 +228,18 @@ h1{
 }
 nav{
     float:right;
-}
+} 
+*/
 
 /*  not a god practice
 .clear{
     clear: both;
 } */
 
-.clearfix::after{ /* 1. this appears only when we define a content property */
+/* .clearfix::after{ 
     clear: both;
     content:" ";
-    display: block; /*2. Trick works on block type only.*/
+    display: block; 
 }
 
 article{
@@ -251,4 +252,56 @@ aside{
 }
 footer{
     clear:both;
+}   */
+
+/* FLEXBOX */
+.main-header{
+    display: flex;
+    justify-content: space-between ;
+}
+
+.author-info{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.author{
+    margin-bottom:0;
+}
+
+.related-post{
+    display: flex;
+    gap: 10px;
+}
+
+.related-link:link{
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: normal;
+    margin-bottom: 5px;
+}
+.related-author{
+    font-size: 12px;
+    font-weight: normal;
+    font-style: italic;
+}
+.related-post:last-child{
+    margin-bottom: 0;
+}
+
+.row{
+    display: flex;
+    margin-bottom: 20px;
+    align-items: flex-start;
+    gap: 75px;
+}
+
+article{
+    margin-bottom: 0;
+    flex: 1; /* adjusts the width to available space*/
+}
+aside{
+    flex: 0 0 300px;
 }
