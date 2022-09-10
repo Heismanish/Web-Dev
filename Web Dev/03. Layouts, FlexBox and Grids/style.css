@@ -21,10 +21,10 @@ body{
 .main-header{
     background-color: #f7f7f7;
     padding: 20px 40px;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
 }
 article{
-    margin-bottom: 60px;
+    /* margin-bottom: 60px; */
 }
 
 nav {
@@ -124,8 +124,29 @@ footer p {
     list-style:none;
 }
 
+.related-link:link{
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: normal;
+    margin-bottom: 5px;
+}
+
+.related-author{
+    font-size: 12px;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.related-post:last-child{
+    margin-bottom: 0;
+}
+
 .main-header{
     background-color:#f7f7f7;
+}
+.author{
+    margin-bottom:0;
 }
 
 
@@ -255,40 +276,10 @@ footer{
 }   */
 
 /* FLEXBOX */
-.main-header{
-    display: flex;
-    justify-content: space-between ;
-}
-
-.author-info{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 10px;
-}
-.author{
-    margin-bottom:0;
-}
-
+/*
 .related-post{
     display: flex;
     gap: 10px;
-}
-
-.related-link:link{
-    display: block;
-    font-size: 15px;
-    font-weight: bold;
-    font-style: normal;
-    margin-bottom: 5px;
-}
-.related-author{
-    font-size: 12px;
-    font-weight: normal;
-    font-style: italic;
-}
-.related-post:last-child{
-    margin-bottom: 0;
 }
 
 .row{
@@ -300,8 +291,42 @@ footer{
 
 article{
     margin-bottom: 0;
-    flex: 1; /* adjusts the width to available space*/
+    flex: 1; 
 }
+
 aside{
     flex: 0 0 300px;
+} */
+.main-header{
+    display: flex;
+    justify-content: space-between ;
+}
+
+.author-info{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* GRID */
+.container{
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    /* grid-template-row:; */
+    gap: 75px;
+    align-items: start;
+}
+.main-header{
+    grid-column: 1 / -1;
+    row-gap: 60px;
+}
+article{
+    grid-column: 1/2;
+    row-gap: 50px;
+}
+aside{
+    grid-column: 2/-1;
+    
 }
