@@ -5,25 +5,33 @@
 10 / 12 / 14 /16 / 18 / 20 / 24 / 30/ 36 / 44 / 52/ 62 / 74 / 86 / 98   
 
 - Font Weights
+Default: 400
+Medium: 500
+Semi-medium: 600
+Bold: 700 
 
 - Line Heights
 Default: 1
+Small: 1.05
+Paragraph: 1.6
 
 
 --- 02 COLORS   
 
 - Primary: #e67e22
 - Tints: #fdf2e9
-- Shades:
+- Shades:#cf711f
 - Accents:
 - Greys
 #555
+#333
 
 
 --- 05 SHADOWS
 
 
 --- 06 BORDER-RADIUS
+DEFAULT: 9px
 
 
 ---- 07 WHITESPACE
@@ -65,19 +73,40 @@ body{
     1 rem = 16px -> 50rem = 800px
 } */
 
-.section-hero{
-    background-color: #fdf2e9;
-    padding: 9.6rem 0;
+/****************************************/
+/* GENERAL REUSABLE COMPONENTS */
+/****************************************/
+
+
+.section-how{
+    padding: 9.6px 0; 
+    background-color: orangered; 
 }
 
-.hero{
-    max-width: 130rem;
+.container{
+    /* 1140px */
+    max-width: 120rem;
     margin: 0 auto;
+    padding: 0 3.2rem; 
+}
+
+.grid{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
     gap: 9.6rem;
 }
+
+.grid-2-cols{
+    grid-template-columns: repeat(2,1fr);
+}
+
+.grid-3-cols{
+    grid-template-columns: repeat(3,1fr);
+}
+
+.grid-4-cols{
+    grid-template-columns: repeat(4 ,1fr);
+}
+
 
 .heading-primary{
     font-size: 5.2rem;
@@ -138,13 +167,91 @@ body{
 
 .hero-img{
     width: 100%;
-
 }
 
 /* helper class */
 .margin-right-sm{
     margin-right: 1.6rem !important;
 }
+
+/************************************************/
+/* HEADER */
+/************************************************/
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fdf2e9;
+
+    /* Because we want it to be sticky later */
+    height: 9.6rem;
+    padding: 0 4.8rem;
+}
+.logo{
+    height:2.2rem ;
+}
+
+
+/************************************************/
+/* NAVIGATION */
+/************************************************/
+
+.main-nav-list{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3.2rem ;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited{
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    font-weight: 5 00;
+    font-size: 1.8rem;
+    transition: all 0.3s;
+}
+
+.main-nav-link:active,
+.main-nav-link:hover{
+    color: #cf711f ;
+}
+
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited{
+     padding: 1.2rem 3.2rem;
+     border-radius: 9px;
+     color: #fff;
+     background-color: #e67e22;
+}
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active{
+    background-color: #cf711f;
+}
+
+/************************************************/
+/* HERO SECTION*/
+/************************************************/
+
+
+.section-hero{
+    background-color: #fdf2e9;
+    padding: 9.6rem 0;
+}
+
+.hero{
+    max-width: 130rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 9.6rem;
+    padding: 0 3.2rem;
+}
+
 
 .delivered-meals{
     display: flex;
@@ -178,3 +285,15 @@ body{
 .delivered-text span{
     color: #cf711f;
 }
+
+/*****************************/
+/* HOW IT WORKS SECTION */
+/*****************************/ 
+
+
+
+
+
+
+
+
